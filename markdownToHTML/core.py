@@ -50,9 +50,9 @@ class MarkdownToHTML:
         self.body.append((args, config))
 
     def getNestedHTML(self, line, config):
-        if re.search(r'\[(.+)\]\((.+)\)', line):
+        if re.search(r'\[(.*?)\]\((.*?)\)', line):
             config['link'] = True
-            match = re.match(r'(.*)\[(.+)\]\((.+)\)(.*)', line)
+            match = re.match(r'(.*)\[(.*?)\]\((.*?)\)(.*)', line)
             return {
                 'start_text': match.group(1).strip(),
                 'link_text': match.group(2).strip(),

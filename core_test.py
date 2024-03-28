@@ -4,7 +4,7 @@ from markdownToHTML import core
 '''
 Note: airium does 2 space indent by default
 
-Doesn't handle case with additional square brackets or regular brackets in text with link
+Doesn't handle case with multiple links
 '''
 class TestMarkdownToHTML(unittest.TestCase):
     def test_convert_heading1(self):
